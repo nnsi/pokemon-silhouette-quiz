@@ -1,0 +1,47 @@
+{
+  "anime": {
+    "name": "アニメ",
+    "quiz": [
+      {
+        "question_statement": "問題文1",
+        "answer": 0,
+        "choices": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "question_statement": "問題文2",
+        "answer": 1,
+        "choices": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "question_statement": "問題文3",
+        "answer": 2,
+        "choices": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "question_statement": "問題文4",
+        "answer": 3,
+        "choices": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    ]
+  }
+}
