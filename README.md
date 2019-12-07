@@ -9,4 +9,4 @@ quiz-app for CODE-DOJO.
 - 正答をその場で表示する
 - 10問終わったら正答数を表示する
 
-[ONLINE DEMO](https://nnsi.github.io/quiz-app/)
+[ONLINE DEMO](https://nnsi.github.io/pokemon-silhouette-quiz/)
