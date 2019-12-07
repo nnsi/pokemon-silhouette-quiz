@@ -15,7 +15,9 @@ h1,footer{
 }
 .container{
   flex-grow:1;
-  margin:2.5rem 1rem;
+  margin:2.5rem auto;
+  padding:0 1rem;
+  max-width:400px;
 }
 h1{
   padding:2rem 0;
@@ -48,7 +50,19 @@ this.app=opts.QuizApp
 this.view="quiztop"
 this.title=""
 this.opt={}
-
+/*
+this.on("before-mount",()=>{
+  this.app={
+    end:()=>{
+      return {
+        correct_count:10,
+        current_number:10
+      }
+    }
+  }
+  this.view="quizend"
+})
+*/
 this.obs.on("title",title=>{
   this.title=title
   this.update()

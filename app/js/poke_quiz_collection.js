@@ -8,14 +8,17 @@ class PokeQuizCollection extends QuizCollection {
   constructor() {
     super(...arguments);
     this.pokedex = JSON.parse(JSON.stringify(this.collection));
-    this.collection = { "all": { "name": "全国版", "quiz": [] } };
+    this.collection = this.makeCollection();
+  }
+  makeCollection() {
+    const collection = { "all": { "name": "全国版", "quiz": [] } };
     GENERATION_NAME.forEach((name, i) => {
       const tmp_object = {
         "name": name,
         "quiz": []
       };
-      this.collection[i] = tmp_object;
-    })
+      collection[i] = tmp_object;
+    });
     this.pokedex.forEach(pokemon => {
       const generation = GENERATION.findIndex(id => pokemon.id <= id);
       if (generation === -1) return;
@@ -27,9 +30,10 @@ class PokeQuizCollection extends QuizCollection {
         "choices": choices,
         "answer": correct_index
       };
-      this.collection[generation].quiz.push(quiz_obj);
-      this.collection.all.quiz.push(quiz_obj);
+      collection[generation].quiz.push(quiz_obj);
+      collection.all.quiz.push(quiz_obj);
     })
+    return collection;
   }
   pickRandomPokemon(ignore_id) {
     let tmp_array = [];
@@ -40,6 +44,10 @@ class PokeQuizCollection extends QuizCollection {
       tmp_array = Array.from(new Set(tmp_array));
     }
     return tmp_array;
+  }
+  getCollection() {
+    this.collection = this.makeCollection();
+    return super.getCollection(...arguments);
   }
 }
 

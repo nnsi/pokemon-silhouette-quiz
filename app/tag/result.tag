@@ -1,7 +1,7 @@
 <QuizResult>
 <p><img ref="image"><br>{result.correct_answer}</p>
 <p>「{choice}」は…{(result.result) ? "正解" : "不正解"}でした！</p>
-<p><button onclick={onNextButtonClick}>次へ</button>
+<p><button onclick={onNextButtonClick}>次の問題</button>
 <style>
 p{
   margin:1.5rem auto 0 auto;
@@ -13,17 +13,18 @@ p:first-child{
   font-weight:bold;
 }
 button{
-    display: block;
-    min-width: 300px;
-    margin: 0 auto;
-    padding: 3px 0;
-    border: 1px solid #ffdd66;
-    border-radius: 10px;
-    background: #ffdd66;
-    font-weight:bold;
-    letter-spacing: 2px;
-    text-indent: 2px;
-    cursor:pointer;
+  display: block;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 3px 0;
+  border: 1px solid #ffdd66;
+  border-radius: 10px;
+  background: #ffdd66;
+  color:black;
+  font-weight:bold;
+  letter-spacing: 2px;
+  text-indent: 2px;
+  cursor:pointer;
 }
 </style>
 <script>

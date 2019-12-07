@@ -35,18 +35,18 @@ input:checked+.text{
   font-weight:bold;
 }
 button{
-    display: block;
-    min-width: 300px;
-    margin: 0 auto;
-    padding: 3px 0;
-    border: 1px solid red;
-    border-radius: 10px;
-    color: white;
-    background: red;
-    font-weight:bold;
-    letter-spacing: 2px;
-    text-indent: 2px;
-    cursor:pointer;
+  display: block;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 3px 0;
+  border: 1px solid red;
+  border-radius: 10px;
+  color: white;
+  background: red;
+  font-weight:bold;
+  letter-spacing: 2px;
+  text-indent: 2px;
+  cursor:pointer;
 }
 button:disabled{
   background:transparent;
